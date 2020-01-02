@@ -25,6 +25,7 @@ class SearchVM: BaseVM {
       .search(query: movieTitle, page: 1)
       .subscribe(onNext: { searchResult in
         self.movies = searchResult.movies
+        self.success()
       }, onError: { error in
         self.hasError("Something went wrong.")
       }).disposed(by: self.disposeBag)

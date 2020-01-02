@@ -8,11 +8,14 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class SearchVC: UIViewController {
 
   // MARK: Private Props
   
+  private let activityIndicator: ActivityIndicatorType = ActivityIndicator.shared
+  private let alertUtil: AlertType = AlertUtil.shared
   private let viewModel = SearchVM()
   
   // MARK: - IBOutlets
@@ -23,6 +26,7 @@ class SearchVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.setUpRx()
   }
 
   // MARK: - IBActions
@@ -32,6 +36,45 @@ class SearchVC: UIViewController {
   }
   
   // MARK: - Private Functions
+  
+  private func handleIsSuccess(_ isSuccess: Bool) {
+    if isSuccess {
+      print("Hello World!")
+    }
+  }
+  
+  private func handleIsBusy(_ isBusy: Bool) {
+    if isBusy {
+      self.activityIndicator.startAnimating()
+    } else {
+      self.activityIndicator.stopAnimating()
+    }
+  }
+  
+  private func handleErrorMessage(_ errorMessage: String) {
+    self.alertUtil.showAlert(title: "Oops!", message: errorMessage, viewController: self)
+  }
+  
+  private func setUpRx() {
+    self.viewModel.isSuccess
+      .asObservable()
+      .subscribe(onNext: { (isSuccess) in
+        self.handleIsSuccess(isSuccess)
+      }).disposed(by: self.viewModel.disposeBag)
+    
+    self.viewModel.isBusy
+      .asObservable()
+      .subscribe(onNext: { (isBusy) in
+        self.handleIsBusy(isBusy)
+      }).disposed(by: self.viewModel.disposeBag)
+    
+    self.viewModel.errorMessage
+      .asObservable()
+      .filter { $0 != "" }
+      .bind { errorMessage in
+        self.handleErrorMessage(errorMessage)
+      }.disposed(by: self.viewModel.disposeBag)
+  }
   
   private func search() {
     guard let movieTitle = searchBarTextField.text else {
