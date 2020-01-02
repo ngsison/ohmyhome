@@ -44,8 +44,12 @@ class SearchVC: UIViewController {
   
   // MARK: - Private Functions
   
+  /**
+   Start listening to `showNetfox` notification.
+   */
+  
   private func setUpNetfox() {
-    let notificationName = NSNotification.Name(rawValue: "statusBarSelected")
+    let notificationName = NSNotification.Name(rawValue: "showNetfox")
     
     NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { event in
       NFX.sharedInstance().show()

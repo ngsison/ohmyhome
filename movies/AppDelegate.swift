@@ -16,23 +16,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    setUpNetfox()
+    self.setUpNetfox()
     return true
   }
   
-  private func setUpNetfox() {
-    NFX.sharedInstance().start()
-  }
+  /**
+   Observe for double tap to trigger netfox.
+   */
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesBegan(touches, with: event)
     
-    let events = event!.allTouches
+    let touchEvents = event!.allTouches
     
-    let touch = events!.first
-    if touch!.tapCount == 2 {
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "statusBarSelected"), object: nil)
+    let latestTouchEvent = touchEvents!.first
+    
+    if latestTouchEvent!.tapCount == 2 {
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showNetfox"), object: nil)
     }
+  }
+  
+  /**
+   Start netfox service.
+   */
+  
+  private func setUpNetfox() {
+    NFX.sharedInstance().start()
   }
 }
 
