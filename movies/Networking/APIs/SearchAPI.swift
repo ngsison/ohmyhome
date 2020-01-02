@@ -34,7 +34,7 @@ extension SearchAPI: TargetType {
   var sampleData: Data {
     switch self {
     case .search:
-      return stubbedResponse("")
+      return stubbedResponse("searchResponse")
     }
   }
   

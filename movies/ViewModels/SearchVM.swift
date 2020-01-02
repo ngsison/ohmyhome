@@ -22,7 +22,7 @@ class SearchVM: BaseVM {
     self.showLoading()
     
     self.adapter
-      .search(query: movieTitle, page: 1)?
+      .search(query: movieTitle, page: 1)
       .subscribe(onNext: { searchResult in
         self.movies = searchResult.movies
       }, onError: { error in

@@ -11,7 +11,7 @@ import RxSwift
 import SwiftyJSON
 
 protocol SearchAdapterType {
-  func search(query: String, page: Int) -> Observable<SearchResult>?
+  func search(query: String, page: Int) -> Observable<SearchResult>
 }
 
 class SearchAdapter: SearchAdapterType {
@@ -23,7 +23,7 @@ class SearchAdapter: SearchAdapterType {
     self.provider = provider
   }
   
-  func search(query: String, page: Int) -> Observable<SearchResult>? {
+  func search(query: String, page: Int) -> Observable<SearchResult> {
     return Observable.create { observer in
       self.provider.rx
         .request(.search(query: query, page: page))
