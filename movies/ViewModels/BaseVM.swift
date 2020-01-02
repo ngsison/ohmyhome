@@ -17,7 +17,7 @@ class BaseVM {
   public var adapter: SearchAdapterType
   
   public var isSuccess: Variable<Bool> = Variable(false)
-  public var isLoading: Variable<Bool> = Variable(false)
+  public var isBusy: Variable<Bool> = Variable(false)
   public var errorMessage: Variable<String> = Variable("")
   
   // MARK: - Public Methods
@@ -29,19 +29,19 @@ class BaseVM {
   
   public func showLoading() {
     self.isSuccess.value = false
-    self.isLoading.value = true
+    self.isBusy.value = true
     self.errorMessage.value = ""
   }
   
   public func success() {
     self.isSuccess.value = true
-    self.isLoading.value = false
+    self.isBusy.value = false
     self.errorMessage.value = ""
   }
   
   public func hasError(_ errorMessage: String) {
     self.isSuccess.value = false
-    self.isLoading.value = false
+    self.isBusy.value = false
     self.errorMessage.value = errorMessage
   }
   
