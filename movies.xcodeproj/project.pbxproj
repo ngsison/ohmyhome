@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204B537F23BE135900157C41 /* StubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B537E23BE135900157C41 /* StubbedResponse.swift */; };
+		204B538323BE140D00157C41 /* SearchAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B538223BE140D00157C41 /* SearchAdapter.swift */; };
+		204B538523BE14DB00157C41 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B538423BE14DB00157C41 /* SearchResult.swift */; };
+		204B538723BE1D2400157C41 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B538623BE1D2400157C41 /* APIError.swift */; };
+		204B538923BE1E0300157C41 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B538823BE1E0200157C41 /* BaseVM.swift */; };
+		2081E16C23BD88B100E1232F /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081E16B23BD88B100E1232F /* SearchAPI.swift */; };
 		208F459723BB288100DCE01E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F459623BB288100DCE01E /* AppDelegate.swift */; };
 		208F459B23BB288100DCE01E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F459A23BB288100DCE01E /* SearchVC.swift */; };
 		208F459E23BB288100DCE01E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F459C23BB288100DCE01E /* Main.storyboard */; };
@@ -29,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204B537E23BE135900157C41 /* StubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedResponse.swift; sourceTree = "<group>"; };
+		204B538223BE140D00157C41 /* SearchAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdapter.swift; sourceTree = "<group>"; };
+		204B538423BE14DB00157C41 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		204B538623BE1D2400157C41 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		204B538823BE1E0200157C41 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		2081E16B23BD88B100E1232F /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		208F459323BB288100DCE01E /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208F459623BB288100DCE01E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		208F459A23BB288100DCE01E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -68,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204B538023BE13D500157C41 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				2081E16B23BD88B100E1232F /* SearchAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		204B538123BE13E500157C41 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				204B538223BE140D00157C41 /* SearchAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		208F458A23BB288100DCE01E = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				20D3D1A723BB476200341C61 /* SearchVM.swift */,
+				204B538823BE1E0200157C41 /* BaseVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +153,7 @@
 		20D3D1A923BB5CD400341C61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				204B538423BE14DB00157C41 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,7 +161,10 @@
 		20D3D1AA23BB5E0700341C61 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				204B538023BE13D500157C41 /* APIs */,
+				204B538123BE13E500157C41 /* Adapters */,
 				20D3D1AB23BB5F4000341C61 /* Stubs */,
+				204B538623BE1D2400157C41 /* APIError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -139,6 +172,7 @@
 		20D3D1AB23BB5F4000341C61 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
+				204B537E23BE135900157C41 /* StubbedResponse.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -286,9 +320,9 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/netfox/netfox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -301,9 +335,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/netfox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,8 +397,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D3D1A823BB476200341C61 /* SearchVM.swift in Sources */,
+				204B538523BE14DB00157C41 /* SearchResult.swift in Sources */,
 				208F459B23BB288100DCE01E /* SearchVC.swift in Sources */,
+				2081E16C23BD88B100E1232F /* SearchAPI.swift in Sources */,
+				204B538923BE1E0300157C41 /* BaseVM.swift in Sources */,
+				204B537F23BE135900157C41 /* StubbedResponse.swift in Sources */,
+				204B538723BE1D2400157C41 /* APIError.swift in Sources */,
 				208F459723BB288100DCE01E /* AppDelegate.swift in Sources */,
+				204B538323BE140D00157C41 /* SearchAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

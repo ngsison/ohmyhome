@@ -7,8 +7,9 @@ target 'movies' do
 
   # Pods for movies
   
-  pod 'Moya'
   pod 'netfox'
+  pod 'Moya/RxSwift'
+  pod 'SwiftyJSON'
   
   pod 'RxSwift'
   pod 'RxCocoa'
