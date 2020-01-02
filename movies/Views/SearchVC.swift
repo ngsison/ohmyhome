@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import netfox
 
 class SearchVC: UIViewController {
 
@@ -27,6 +28,12 @@ class SearchVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.setUpRx()
+    self.setUpNetfox()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    NotificationCenter.default.removeObserver(self)
   }
 
   // MARK: - IBActions
@@ -36,6 +43,14 @@ class SearchVC: UIViewController {
   }
   
   // MARK: - Private Functions
+  
+  private func setUpNetfox() {
+    let notificationName = NSNotification.Name(rawValue: "statusBarSelected")
+    
+    NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { event in
+      NFX.sharedInstance().show()
+    }
+  }
   
   private func handleIsSuccess(_ isSuccess: Bool) {
     if isSuccess {
