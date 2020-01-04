@@ -3,6 +3,7 @@ PODS:
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
+  - LUAutocompleteView (4.0.0)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher
+  - LUAutocompleteView
   - Moya/RxSwift
   - netfox
   - NVActivityIndicatorView
@@ -31,9 +33,10 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Kingfisher
+    - LUAutocompleteView
     - Moya
     - netfox
     - NVActivityIndicatorView
@@ -46,6 +49,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  LUAutocompleteView: 604edbbb358d77c8fff4b86137db76a38eb4beda
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   netfox: 95b3583c28e4a3376cc5a647d48e8e26f5b16d58
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a0fcd6c074e0d847f743dad0a867e9157a60b5da
+PODFILE CHECKSUM: afe95e39f18a2ab2b4b07ecbab4c5e3ada71e372
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

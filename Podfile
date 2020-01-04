@@ -17,6 +17,7 @@ target 'movies' do
   pod 'Kingfisher'
   pod 'SnapKit'
   pod 'NVActivityIndicatorView'
+  pod 'LUAutocompleteView'
 
   target 'moviesTests' do
     inherit! :search_paths
