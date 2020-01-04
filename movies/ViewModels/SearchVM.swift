@@ -14,6 +14,7 @@ class SearchVM: BaseVM {
   
   public var searchKeyword: String = ""
   public var searchResult: SearchResult = SearchResult()
+  public var sss: SearchSuggestionsServiceType = SearchSuggestionsService.shared
   
   // MARK: - Public Methods
   
@@ -34,6 +35,7 @@ class SearchVM: BaseVM {
           return
         }
         
+        self.sss.add(movieTitle)
         self.searchKeyword = movieTitle
         self.searchResult = searchResult
         self.success()

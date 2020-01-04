@@ -21,6 +21,7 @@ class SearchVC: UIViewController {
   private let viewModel = SearchVM()
   
   private let autocompleteView = LUAutocompleteView()
+  private let sss: SearchSuggestionsServiceType = SearchSuggestionsService.shared
   
   // MARK: - IBOutlets
   
@@ -130,7 +131,7 @@ class SearchVC: UIViewController {
   }
   
   private func search() {
-    guard let movieTitle = searchBarTextField.text, !movieTitle.isEmpty else {
+    guard let movieTitle = searchBarTextField.text, !movieTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
       return
     }
     
@@ -142,7 +143,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: LUAutocompleteViewDataSource {
   func autocompleteView(_ autocompleteView: LUAutocompleteView, elementsFor text: String, completion: @escaping ([String]) -> Void) {
-    let suggestions = ["Hello", "World"]
+    let suggestions = self.viewModel.sss.load()
     completion(suggestions)
   }
 }
@@ -152,5 +153,6 @@ extension SearchVC: LUAutocompleteViewDataSource {
 extension SearchVC: LUAutocompleteViewDelegate {
   func autocompleteView(_ autocompleteView: LUAutocompleteView, didSelect text: String) {
     self.searchBarTextField.text = text
+    self.search()
   }
 }

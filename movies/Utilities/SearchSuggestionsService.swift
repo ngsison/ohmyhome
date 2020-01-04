@@ -1,5 +1,5 @@
 //
-//  SearchSuggestions.swift
+//  SearchSuggestionsService.swift
 //  movies
 //
 //  Created by Nathaniel Brion Sison on 05/01/2020.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol SearchSuggestionsDefinition {
+protocol SearchSuggestionsServiceType {
   func add(_ searchKeyword: String)
   func load() -> [String]
   func clear()
 }
 
-class SearchSuggestions {
+class SearchSuggestionsService: SearchSuggestionsServiceType {
   
   // MARK: - Private Props
   
@@ -23,7 +23,7 @@ class SearchSuggestions {
  
   // MARK: - Public Props
   
-  public static let shared = SearchSuggestions()
+  public static let shared = SearchSuggestionsService()
 
   // MARK: - Public Methods
   
