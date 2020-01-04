@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		20C43F9C23C0AC5500655F5D /* MoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C43F9B23C0AC5500655F5D /* MoviesVC.swift */; };
 		20C43F9E23C0B8FB00655F5D /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C43F9D23C0B8FB00655F5D /* MovieCell.swift */; };
 		20C43FA023C0B9A900655F5D /* MoviesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C43F9F23C0B9A900655F5D /* MoviesVM.swift */; };
+		20CA0AE223C108880002EFD4 /* SearchSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CA0AE123C108880002EFD4 /* SearchSuggestions.swift */; };
 		20D05CD223BE3AD500EFC348 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D05CD123BE3AD500EFC348 /* Constants.swift */; };
 		20D3D1A823BB476200341C61 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3D1A723BB476200341C61 /* SearchVM.swift */; };
 		51D6000699CF191B0D9CE5E8 /* Pods_moviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0AD2E7B5AE4C78A7D1E50F /* Pods_moviesTests.framework */; };
@@ -66,6 +67,7 @@
 		20C43F9B23C0AC5500655F5D /* MoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVC.swift; sourceTree = "<group>"; };
 		20C43F9D23C0B8FB00655F5D /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		20C43F9F23C0B9A900655F5D /* MoviesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVM.swift; sourceTree = "<group>"; };
+		20CA0AE123C108880002EFD4 /* SearchSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestions.swift; sourceTree = "<group>"; };
 		20D05CD123BE3AD500EFC348 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20D3D1A723BB476200341C61 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		3C30EC611E85B37C402861AF /* Pods-moviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moviesTests/Pods-moviesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				204B539123BE323400157C41 /* Helpers */,
 				20D05CD123BE3AD500EFC348 /* Constants.swift */,
+				20CA0AE123C108880002EFD4 /* SearchSuggestions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CA0AE223C108880002EFD4 /* SearchSuggestions.swift in Sources */,
 				20D3D1A823BB476200341C61 /* SearchVM.swift in Sources */,
 				204B538523BE14DB00157C41 /* SearchResult.swift in Sources */,
 				208F459B23BB288100DCE01E /* SearchVC.swift in Sources */,
