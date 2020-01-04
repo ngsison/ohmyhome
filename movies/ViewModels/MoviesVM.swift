@@ -12,6 +12,7 @@ class MoviesVM: BaseVM {
   
   // MARK: - Public Props
   
+  public var searchKeyword: String = ""
   public var searchResult: SearchResult = SearchResult()
   public var movies: [Movie] = [Movie]()
   

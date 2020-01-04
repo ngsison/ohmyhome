@@ -62,6 +62,7 @@ class SearchVC: UIViewController {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       
       let moviesVC = storyboard.instantiateViewController(withIdentifier: "MoviesVC") as! MoviesVC
+      moviesVC.viewModel.searchKeyword = self.viewModel.searchKeyword
       moviesVC.viewModel.searchResult = self.viewModel.searchResult
       moviesVC.viewModel.movies = self.viewModel.searchResult.movies
       

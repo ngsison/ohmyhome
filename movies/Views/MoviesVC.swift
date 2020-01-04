@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class MoviesVC: UIViewController {
   
   // MARK: Public Props
   
+  private let activityIndicator: ActivityIndicatorType = ActivityIndicator.shared
+  private let alertUtil: AlertType = AlertUtil.shared
   public var viewModel: MoviesVM = MoviesVM()
   
   // MARK: - IBOutlets
@@ -23,6 +26,7 @@ class MoviesVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.setUpTableView()
+    self.setUpRx()
   }
   
   // MARK: - Private Methods
@@ -30,6 +34,45 @@ class MoviesVC: UIViewController {
   private func setUpTableView() {
     self.tableView.dataSource = self
     self.tableView.delegate = self
+  }
+  
+  private func handleIsSuccess(_ isSuccess: Bool) {
+    if isSuccess {
+      self.tableView.reloadData()
+    }
+  }
+  
+  private func handleIsBusy(_ isBusy: Bool) {
+    if isBusy {
+      self.activityIndicator.startAnimating()
+    } else {
+      self.activityIndicator.stopAnimating()
+    }
+  }
+  
+  private func handleErrorMessage(_ errorMessage: String) {
+    self.alertUtil.showAlert(title: "Oops!", message: errorMessage, viewController: self)
+  }
+  
+  private func setUpRx() {
+    self.viewModel.isSuccess
+      .asObservable()
+      .subscribe(onNext: { (isSuccess) in
+        self.handleIsSuccess(isSuccess)
+      }).disposed(by: self.viewModel.disposeBag)
+    
+    self.viewModel.isBusy
+      .asObservable()
+      .subscribe(onNext: { (isBusy) in
+        self.handleIsBusy(isBusy)
+      }).disposed(by: self.viewModel.disposeBag)
+    
+    self.viewModel.errorMessage
+      .asObservable()
+      .filter { $0 != "" }
+      .bind { errorMessage in
+        self.handleErrorMessage(errorMessage)
+    }.disposed(by: self.viewModel.disposeBag)
   }
 }
 
@@ -65,7 +108,11 @@ extension MoviesVC: UITableViewDelegate {
     let visibleContentHeight = scrollView.contentSize.height - invisibleContentHeight
     
     if visibleContentHeight < visibleFrameHeight {
-      // TODO: Load more movies.
+      if !self.viewModel.isBusy.value && self.viewModel.searchResult.page < self.viewModel.searchResult.totalPages {
+        let movieTitle = self.viewModel.searchKeyword
+        let nextPage = self.viewModel.searchResult.page + 1
+        self.viewModel.search(movieTitle, page: nextPage)
+      }
     }
   }
 }

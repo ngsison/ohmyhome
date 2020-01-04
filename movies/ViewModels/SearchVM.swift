@@ -12,6 +12,7 @@ class SearchVM: BaseVM {
   
   // MARK: - Public Props
   
+  public var searchKeyword: String = ""
   public var searchResult: SearchResult = SearchResult()
   
   // MARK: - Public Methods
@@ -33,6 +34,7 @@ class SearchVM: BaseVM {
           return
         }
         
+        self.searchKeyword = movieTitle
         self.searchResult = searchResult
         self.success()
       }, onError: { error in
