@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import netfox
+import LUAutocompleteView
 
 class SearchVC: UIViewController {
 
@@ -18,6 +19,8 @@ class SearchVC: UIViewController {
   private let activityIndicator: ActivityIndicatorType = ActivityIndicator.shared
   private let alertUtil: AlertType = AlertUtil.shared
   private let viewModel = SearchVM()
+  
+  private let autocompleteView = LUAutocompleteView()
   
   // MARK: - IBOutlets
   
@@ -30,6 +33,7 @@ class SearchVC: UIViewController {
     super.viewDidLoad()
     self.setUpRx()
     self.setUpNetfox()
+    self.setUpAutocomplete()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -44,6 +48,13 @@ class SearchVC: UIViewController {
   }
   
   // MARK: - Private Functions
+  
+  private func setUpAutocomplete() {
+    self.view.addSubview(self.autocompleteView)
+    self.autocompleteView.textField = self.searchBarTextField
+    self.autocompleteView.dataSource = self
+    self.autocompleteView.delegate = self
+  }
   
   /**
    Start listening to `showNetfox` notification.
@@ -127,3 +138,19 @@ class SearchVC: UIViewController {
   }
 }
 
+// MARK: - LUAutocompleteViewDataSource
+
+extension SearchVC: LUAutocompleteViewDataSource {
+  func autocompleteView(_ autocompleteView: LUAutocompleteView, elementsFor text: String, completion: @escaping ([String]) -> Void) {
+    let suggestions = ["Hello", "World"]
+    completion(suggestions)
+  }
+}
+
+// MARK: - LUAutocompleteViewDelegate
+
+extension SearchVC: LUAutocompleteViewDelegate {
+  func autocompleteView(_ autocompleteView: LUAutocompleteView, didSelect text: String) {
+    self.searchBarTextField.text = text
+  }
+}
