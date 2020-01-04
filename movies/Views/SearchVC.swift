@@ -57,6 +57,7 @@ class SearchVC: UIViewController {
     self.autocompleteView.textField = self.searchBarTextField
     self.autocompleteView.dataSource = self
     self.autocompleteView.delegate = self
+    self.autocompleteView.maximumHeight = 400
   }
   
   /**
