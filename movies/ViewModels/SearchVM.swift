@@ -10,7 +10,7 @@ import RxSwift
 
 class SearchVM: BaseVM {
   
-  public var movies: [Movie] = [Movie]()
+  public var searchResult: SearchResult = SearchResult()
   
   /**
    Performs search against the API.
@@ -29,7 +29,7 @@ class SearchVM: BaseVM {
           return
         }
         
-        self.movies = searchResult.movies
+        self.searchResult = searchResult
         self.success()
       }, onError: { error in
         self.hasError("Something went wrong.")

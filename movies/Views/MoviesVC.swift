@@ -57,6 +57,15 @@ extension MoviesVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return UITableView.automaticDimension
   }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let visibleFrameHeight = scrollView.frame.size.height
+    let invisibleContentHeight = scrollView.contentOffset.y
+    
+    let visibleContentHeight = scrollView.contentSize.height - invisibleContentHeight
+    
+    if visibleContentHeight < visibleFrameHeight {
+      // TODO: Load more movies.
+    }
+  }
 }
-
-

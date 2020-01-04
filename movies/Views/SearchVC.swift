@@ -62,7 +62,7 @@ class SearchVC: UIViewController {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       
       let moviesVC = storyboard.instantiateViewController(withIdentifier: "MoviesVC") as! MoviesVC
-      moviesVC.viewModel.movies = self.viewModel.movies
+      moviesVC.viewModel.movies = self.viewModel.searchResult.movies
       
       self.navigationController?.pushViewController(moviesVC, animated: true)
     }

@@ -13,7 +13,9 @@ class SearchResult {
   public var totalPages = 0
   public var totalResults = 0
   public var page = 0
-  public var movies: [Movie]
+  public var movies: [Movie] = [Movie]()
+  
+  init() {}
   
   init?(json: JSON) {
     guard let result = json["results"].array else {
