@@ -14,7 +14,7 @@ enum SearchAPI {
 
 extension SearchAPI: TargetType {
   var baseURL: URL {
-    return URL(string: "https://api.themoviedb.org/3")!
+    return URL(string: Constants.MOVIE_DB_BASE_URL)!
   }
   
   var path: String {
