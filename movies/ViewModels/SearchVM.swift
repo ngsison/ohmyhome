@@ -10,7 +10,11 @@ import RxSwift
 
 class SearchVM: BaseVM {
   
+  // MARK: - Public Props
+  
   public var searchResult: SearchResult = SearchResult()
+  
+  // MARK: - Public Methods
   
   /**
    Performs search against the API.
