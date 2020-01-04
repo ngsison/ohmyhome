@@ -24,6 +24,11 @@ class SearchVM: BaseVM {
     self.adapter
       .search(query: movieTitle, page: 1)
       .subscribe(onNext: { searchResult in
+        if searchResult.movies.isEmpty {
+          self.hasError("No results found.")
+          return
+        }
+        
         self.movies = searchResult.movies
         self.success()
       }, onError: { error in
