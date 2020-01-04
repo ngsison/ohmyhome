@@ -24,7 +24,7 @@ class BaseVM {
   
   init(adapter: SearchAdapterType = SearchAdapter()) {
     self.adapter = adapter
-    //self.adapter = fakeAdapter() // Uncomment this line to use mock data.
+    self.adapter = fakeAdapter() // Uncomment this line to use mock data.
   }
   
   public func showLoading() {
@@ -57,7 +57,8 @@ class BaseVM {
     }
     
     let stubClosure = { (_: SearchAPI) -> Moya.StubBehavior in
-      return .delayed(seconds: 1)
+      //return .delayed(seconds: 1)
+      return .immediate
     }
     
     let fakeProvider = MoyaProvider<SearchAPI>(endpointClosure: endpointClosure,

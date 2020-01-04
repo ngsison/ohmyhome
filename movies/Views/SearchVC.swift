@@ -58,7 +58,9 @@ class SearchVC: UIViewController {
   
   private func handleIsSuccess(_ isSuccess: Bool) {
     if isSuccess {
-      print("Hello World!")
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let moviesVC = storyboard.instantiateViewController(withIdentifier: "MoviesVC") as! MoviesVC
+      self.navigationController?.pushViewController(moviesVC, animated: true)
     }
   }
   
