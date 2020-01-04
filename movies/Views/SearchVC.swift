@@ -51,6 +51,8 @@ class SearchVC: UIViewController {
   // MARK: - Private Functions
   
   private func setUpAutocomplete() {
+    self.searchBarTextField.delegate = self
+    
     self.view.addSubview(self.autocompleteView)
     self.autocompleteView.textField = self.searchBarTextField
     self.autocompleteView.dataSource = self
@@ -136,6 +138,24 @@ class SearchVC: UIViewController {
     }
     
     viewModel.search(movieTitle)
+  }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension SearchVC: UITextFieldDelegate {
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    
+    /*
+     Manually firing `editingChanged` alone will not cause the autocomplete popup to show
+     if its `textfield.text` is empty.
+     */
+    
+    if let text = self.autocompleteView.textField?.text, text.isEmpty {
+      self.autocompleteView.textField?.text = " "
+    }
+    
+    self.autocompleteView.textField?.sendActions(for: .editingChanged)
   }
 }
 

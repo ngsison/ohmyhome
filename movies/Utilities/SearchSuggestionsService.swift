@@ -38,7 +38,7 @@ class SearchSuggestionsService: SearchSuggestionsServiceType {
     var suggestions = self.load()
     
     suggestions = suggestions.filter { $0 != suggestion }
-    suggestions.insert(suggestion, at: 0)
+    suggestions.insert(suggestion.trimmingCharacters(in: .whitespacesAndNewlines), at: 0)
     
     if suggestions.count > self.suggestionsLimit {
       let mostRecentSuggestions = suggestions[..<self.suggestionsLimit]
