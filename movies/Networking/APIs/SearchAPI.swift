@@ -41,7 +41,7 @@ extension SearchAPI: TargetType {
   var task: Task {
     switch self {
     case .search(let query, let page):
-      return .requestParameters(parameters: ["api_key": Constants.apiKey, "query": query, "page": page],
+      return .requestParameters(parameters: ["api_key": Constants.API_KEY, "query": query, "page": page],
                                 encoding: URLEncoding.default)
     }
   }

@@ -1,26 +1,380 @@
 {
-  "result": [
+  "total_pages" : 3,
+  "results" : [
     {
-      "poster_path": "/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg",
-      "adult": false,
-      "overview": "Jack Reacher must uncover the truth behind a major government conspiracy in order to clear his name. On the run as a fugitive from the law, Reacher uncovers a potential secret from his past that could change his life forever.",
-      "release_date": "2016-10-19",
-      "genre_ids": [
-        53,
-        28,
+      "id" : 475557,
+      "adult" : false,
+      "backdrop_path" : "\/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+      "original_title" : "Joker",
+      "genre_ids" : [
         80,
         18,
-        9648
+        53
       ],
-      "id": 343611,
-      "original_title": "Jack Reacher: Never Go Back",
-      "original_language": "en",
-      "title": "Jack Reacher: Never Go Back",
-      "backdrop_path": "/4ynQYtSEuU5hyipcGkfD6ncwtwz.jpg",
-      "popularity": 26.818468,
-      "vote_count": 201,
-      "video": false,
-      "vote_average": 4.19
+      "vote_average" : 8.3000000000000007,
+      "popularity" : 282.68099999999998,
+      "poster_path" : "\/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+      "title" : "Joker",
+      "overview" : "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+      "original_language" : "en",
+      "vote_count" : 7341,
+      "release_date" : "2019-10-02",
+      "video" : false
+    },
+    {
+      "id" : 129507,
+      "adult" : false,
+      "backdrop_path" : "\/7hsepp47nWm5cPgC1bEFJQK3Rk8.jpg",
+      "original_title" : "Joker",
+      "genre_ids" : [
+        35,
+        878
+      ],
+      "vote_average" : 3.3999999999999999,
+      "popularity" : 3.1389999999999998,
+      "poster_path" : "\/ql1DUWjY6Y6zEbVFS83s20SBo8J.jpg",
+      "title" : "Joker",
+      "overview" : "In 1947 when the maps of India and Pakistan were being drawn, an oversight ensured that the village of Paglapur didn't find a place in either country. Over 60 years later, Paglapur is isolated, and in need of help. The residents seek help, but as a direct result of being left off the map, they find noone willing to accept Paglapur, and its problems, as their jurisdiction. The villagers decide they need to draw media attention to Paglapur, and in so doing, gain acceptance and help from those who had previously denied them.",
+      "original_language" : "hi",
+      "vote_count" : 23,
+      "release_date" : "2012-08-31",
+      "video" : false
+    },
+    {
+      "id" : 16234,
+      "adult" : false,
+      "backdrop_path" : "\/pZCuxgUsDICPDKIFH8s5nQGeL4r.jpg",
+      "original_title" : "Batman Beyond: Return of the Joker",
+      "genre_ids" : [
+        28,
+        16,
+        878,
+        10751
+      ],
+      "vote_average" : 7.5999999999999996,
+      "popularity" : 9.6080000000000005,
+      "poster_path" : "\/vIRHN4AXaQM6mMVj8CozhtelYmF.jpg",
+      "title" : "Batman Beyond: Return of the Joker",
+      "overview" : "The Joker is back with a vengeance, and Gotham's newest Dark Knight needs answers as he stands alone to face Gotham's most infamous Clown Prince of Crime.",
+      "original_language" : "en",
+      "vote_count" : 340,
+      "release_date" : "2000-12-12",
+      "video" : false
+    },
+    {
+      "id" : 214711,
+      "adult" : false,
+      "backdrop_path" : "\/ftVV8apC1o79GnFjxMmbKkL7qX3.jpg",
+      "original_title" : "Joker Rising",
+      "genre_ids" : [
+        80
+      ],
+      "vote_average" : 7.2000000000000002,
+      "popularity" : 3.9700000000000002,
+      "poster_path" : "\/61TRGy5wAKHFIfJ3eZpvlJ2TA8X.jpg",
+      "title" : "Joker Rising",
+      "overview" : "The dark and gritty story of where the Joker came from and how he became the villain that he is today.",
+      "original_language" : "en",
+      "vote_count" : 8,
+      "release_date" : "2013-09-21",
+      "video" : false
+    },
+    {
+      "genre_ids" : [
+        28,
+        80,
+        10749
+      ],
+      "adult" : false,
+      "backdrop_path" : null,
+      "original_title" : "Untitled Harley Quinn & The Joker Project",
+      "id" : 472639,
+      "vote_average" : 0,
+      "popularity" : 4.3700000000000001,
+      "poster_path" : null,
+      "title" : "Untitled Harley Quinn & The Joker Project",
+      "overview" : "A criminal love story. Plot unknown.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "video" : false
+    },
+    {
+      "id" : 133792,
+      "vote_average" : 7.5,
+      "genre_ids" : [
+        18
+      ],
+      "original_title" : "The Joker Is Wild",
+      "backdrop_path" : "\/qrDGuzucmpKtNwp27xljTl0UymL.jpg",
+      "adult" : false,
+      "popularity" : 2.8969999999999998,
+      "poster_path" : "\/IzpqXlHFAHKDI5xpZ68OugMkyn.jpg",
+      "title" : "The Joker Is Wild",
+      "overview" : "Frank Sinatra stars in director Charles Vidor's 1957 film biography of nightclub entertainer Joe E. Lewis. The cast also includes Mitzi Gaynor, Jeanne Crain, Eddie Albert, Beverly Garland, Jackie Coogan, Harold Huber, Barry Kelley, Ted de Corsia, Ned Glass, Mary Treen and Sid Melton.",
+      "original_language" : "en",
+      "vote_count" : 8,
+      "release_date" : "1957-09-26",
+      "video" : false
+    },
+    {
+      "id" : 146486,
+      "vote_average" : 4.4000000000000004,
+      "genre_ids" : [
+        35
+      ],
+      "original_title" : "Joker",
+      "backdrop_path" : "\/53WIxWs7RWUja4CzE3TJOQ2xjVv.jpg",
+      "adult" : false,
+      "popularity" : 1.1000000000000001,
+      "poster_path" : "\/rY8eu4yQTwpZgz8BEVKfGIh8TUG.jpg",
+      "title" : "Joker",
+      "overview" : "",
+      "original_language" : "sv",
+      "vote_count" : 7,
+      "release_date" : "1991-11-01",
+      "video" : false
+    },
+    {
+      "id" : 416572,
+      "vote_average" : 3.7999999999999998,
+      "genre_ids" : [
+        27,
+        53
+      ],
+      "original_title" : "Joker's Poltergeist",
+      "backdrop_path" : "\/fihXbO1gnEcoeYNzSdV8864XLSS.jpg",
+      "adult" : false,
+      "popularity" : 3.3199999999999998,
+      "poster_path" : "\/q27Irmlp9SansPgBv3u0D7TU6Sv.jpg",
+      "title" : "Joker's Poltergeist",
+      "overview" : "After a clown-masked assailant guns down Aurora's Place, the resident theater owner fights to re-open her business.",
+      "original_language" : "en",
+      "vote_count" : 10,
+      "release_date" : "2015-06-03",
+      "video" : false
+    },
+    {
+      "id" : 394520,
+      "vote_average" : 5,
+      "genre_ids" : [
+        9648,
+        16,
+        878
+      ],
+      "original_title" : "JOKER マージナル・シティ",
+      "backdrop_path" : "\/xLkGhJdPYypptPTy1H8A65b0AEM.jpg",
+      "adult" : false,
+      "popularity" : 0.66700000000000004,
+      "poster_path" : "\/68DKYcI7DdhYfw9C2rGgs6FdLFp.jpg",
+      "title" : "JOKER: Marginal City",
+      "overview" : "Joker is a cyborg who has superior strength, can absorb the DNA of any person by touch and regrow its body or part of it at will (hence Joker can be a male or a female). Joker belongs to a special troop of law enforcement: as cop, judge and executioner at the same time. Along with his\/her lover, a police officer, they have dealt against criminals of every type.",
+      "original_language" : "ja",
+      "vote_count" : 2,
+      "release_date" : "1992-04-21",
+      "video" : false
+    },
+    {
+      "id" : 92152,
+      "vote_average" : 5.5999999999999996,
+      "genre_ids" : [
+        18,
+        80,
+        53
+      ],
+      "original_title" : "Der Joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 1.8100000000000001,
+      "poster_path" : "\/lCh6AFRr0NN7bxt8E52Xvg01Hlz.jpg",
+      "title" : "Lethal Obsession",
+      "overview" : "",
+      "original_language" : "de",
+      "vote_count" : 5,
+      "release_date" : "1987-10-15",
+      "video" : false
+    },
+    {
+      "id" : 361365,
+      "adult" : false,
+      "backdrop_path" : null,
+      "original_title" : "Joker",
+      "genre_ids" : [
+        
+      ],
+      "vote_average" : 0,
+      "popularity" : 0.59999999999999998,
+      "poster_path" : "\/sxvGzhK62cZ3KVDnJ7hDTcQvgMz.jpg",
+      "title" : "Joker",
+      "overview" : "1983 short by Tessa Hughes-Freeland",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "1983-09-25",
+      "video" : false
+    },
+    {
+      "id" : 407788,
+      "vote_average" : 5.5,
+      "genre_ids" : [
+        
+      ],
+      "original_title" : "King, Queen and Joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.65900000000000003,
+      "poster_path" : "\/1ZDsR98CQDZefD9feRWNKKjkvLY.jpg",
+      "title" : "King, Queen and Joker",
+      "overview" : "King, Queen, Joker is a 1921 silent feature farce written and directed by Sydney Chaplin, Charlie's older brother. The picture was produced by Famous Players-Lasky and distributed through Paramount Pictures. The film was shot in England, France and the United States.\r Less than a reel of this film, the barbershop sequence, survives at the British Film Institute. It was included in the 2011 Criterion DVD special two disc edition release of The Great Dictator.",
+      "original_language" : "en",
+      "vote_count" : 2,
+      "release_date" : "1921-05-15",
+      "video" : false
+    },
+    {
+      "id" : 556726,
+      "vote_average" : 0,
+      "genre_ids" : [
+        
+      ],
+      "original_title" : "Le joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.59999999999999998,
+      "poster_path" : null,
+      "title" : "Le joker",
+      "overview" : "",
+      "original_language" : "fr",
+      "vote_count" : 0,
+      "release_date" : "1930-11-14",
+      "video" : false
+    },
+    {
+      "id" : 219521,
+      "vote_average" : 7,
+      "genre_ids" : [
+        
+      ],
+      "original_title" : "The Impractical Joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.59999999999999998,
+      "poster_path" : "\/3ZbKRuX9TN7SX2uoiE7k612SHWH.jpg",
+      "title" : "The Impractical Joker",
+      "overview" : "Betty Boop's baking is interrupted by obnoxious practical joking friend Irving. Can Grampy out-joke the joker?",
+      "original_language" : "en",
+      "vote_count" : 1,
+      "release_date" : "1937-06-17",
+      "video" : false
+    },
+    {
+      "id" : 373797,
+      "vote_average" : 0,
+      "genre_ids" : [
+        35
+      ],
+      "original_title" : "Mera Naam Joker",
+      "backdrop_path" : "\/iywXMAp14tvDyF7I4FPo4IEfqJP.jpg",
+      "adult" : false,
+      "popularity" : 0.96299999999999997,
+      "poster_path" : "\/gQdLU4CXoYsgBuYKO92DoGjlGjs.jpg",
+      "title" : "Mera Naam Joker",
+      "overview" : "The story of four friends who decide to start a Auto Mechanic story.",
+      "original_language" : "ml",
+      "vote_count" : 0,
+      "release_date" : "2000-08-16",
+      "video" : false
+    },
+    {
+      "id" : 563477,
+      "vote_average" : 0,
+      "genre_ids" : [
+        
+      ],
+      "original_title" : "Ero the Joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.63200000000000001,
+      "poster_path" : "\/xNVLGgvlyzeGAM7jeOMTQ4DXCvD.jpg",
+      "title" : "Ero the Joker",
+      "overview" : "To find a wife who truly loves him, a young trickster disguises himself as a pauper. But getting her parents' blessing will take every trick in the book.  Part of the Croatian National Theatre’s repertoire since its premiere in 1935, Jakov Gotovac’s comic opera is an ode to a rural way of life. It culminates in a frenzied tempo with a vigorous ballet – a celebration of Dalmatian music and dance.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2018-11-06",
+      "video" : false
+    },
+    {
+      "id" : 301290,
+      "vote_average" : 0,
+      "genre_ids" : [
+        16
+      ],
+      "original_title" : "An Ace and a Joker",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.59999999999999998,
+      "poster_path" : "\/uC9QiZBm5eQbiy5zG43kc9mjTCz.jpg",
+      "title" : "An Ace and a Joker",
+      "overview" : "",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "1918-08-10",
+      "video" : false
+    },
+    {
+      "id" : 633184,
+      "vote_average" : 0,
+      "genre_ids" : [
+        
+      ],
+      "original_title" : "Patient J (Joker)",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.59999999999999998,
+      "poster_path" : null,
+      "title" : "Patient J (Joker)",
+      "overview" : "Deep in the basement of Arkham Asylum, a desperate Psychologist has secretly set up an interview with the mass-murdering Joker. As the Clown Prince of Crime reflects on the key moments of his memories, the interview drifts into a game of manipulation that flirts with life and death.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "",
+      "video" : false
+    },
+    {
+      "id" : 292209,
+      "adult" : false,
+      "backdrop_path" : null,
+      "original_title" : "Joker's Wild",
+      "genre_ids" : [
+        35
+      ],
+      "vote_average" : 3,
+      "popularity" : 1.286,
+      "poster_path" : "\/AvZwxt9eSRApAxfydtanPmYqz0s.jpg",
+      "title" : "Joker's Wild",
+      "overview" : "A jealous mobster chases a screenwriter, who likes his friend, from New York to the Caribbean.",
+      "original_language" : "en",
+      "vote_count" : 1,
+      "release_date" : "1992-10-20",
+      "video" : false
+    },
+    {
+      "id" : 533864,
+      "vote_average" : 0,
+      "genre_ids" : [
+        80,
+        28
+      ],
+      "original_title" : "Untitled Jared Leto \/ Joker Film",
+      "backdrop_path" : null,
+      "adult" : false,
+      "popularity" : 0.88900000000000001,
+      "poster_path" : null,
+      "title" : "Untitled Jared Leto \/ Joker Film",
+      "overview" : "Stand-alone project centering on The Joker from the 2016 film 'Suicide Squad'.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "",
+      "video" : false
     }
-  ]
+  ],
+  "total_results" : 54,
+  "page" : 1
 }

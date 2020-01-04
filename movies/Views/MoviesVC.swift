@@ -10,6 +10,10 @@ import UIKit
 
 class MoviesVC: UIViewController {
   
+  // MARK: Public Props
+  
+  public var viewModel: MoviesVM = MoviesVM()
+  
   // MARK: - IBOutlets
   
   @IBOutlet weak var tableView: UITableView!
@@ -33,11 +37,12 @@ class MoviesVC: UIViewController {
 
 extension MoviesVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return viewModel.movies.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieCell
+    cell.configure(self.viewModel.movies[indexPath.row])
     return cell
   }
 }

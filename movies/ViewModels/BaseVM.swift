@@ -24,7 +24,7 @@ class BaseVM {
   
   init(adapter: SearchAdapterType = SearchAdapter()) {
     self.adapter = adapter
-    self.adapter = fakeAdapter() // Uncomment this line to use mock data.
+    //self.adapter = fakeAdapter() // Uncomment this line to use mock data.
   }
   
   public func showLoading() {

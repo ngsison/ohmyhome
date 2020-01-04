@@ -9,20 +9,22 @@
 import SwiftyJSON
 
 class Movie {
-  public var posterPath: String
-  public var adult: Bool
-  public var overview: String
-  public var releaseDate: String
-  public var genreIds: [Int]
-  public var id: Int
-  public var originalTitle: String
-  public var originalLanguage: String
-  public var title: String
-  public var backdropPath: String
-  public var popularity: Double
-  public var voteCount: Int
-  public var video: Bool
-  public var voteAverage: Float
+  public var posterPath: String = ""
+  public var adult: Bool = false
+  public var overview: String = ""
+  public var releaseDate: String = ""
+  public var genreIds: [Int] = [Int]()
+  public var id: Int = 0
+  public var originalTitle: String = ""
+  public var originalLanguage: String = ""
+  public var title: String = ""
+  public var backdropPath: String = ""
+  public var popularity: Double = 0
+  public var voteCount: Int = 0
+  public var video: Bool = false
+  public var voteAverage: Float = 0
+  
+  init() {}
   
   init?(json: JSON) {
     self.posterPath = json["poster_path"].stringValue
@@ -32,8 +34,6 @@ class Movie {
     
     if let genreIds = json["genre_ids"].arrayObject as? [Int] {
       self.genreIds = genreIds
-    } else {
-      self.genreIds = [Int]()
     }
     
     self.id = json["id"].intValue
