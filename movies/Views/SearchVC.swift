@@ -21,6 +21,7 @@ class SearchVC: UIViewController {
   
   // MARK: - IBOutlets
   
+  @IBOutlet weak var searchButton: UIButton!
   @IBOutlet weak var searchBarTextField: UITextField!
   
   // MARK: - Lifecycle Events
@@ -79,6 +80,13 @@ class SearchVC: UIViewController {
     self.alertUtil.showAlert(title: "Oops!", message: errorMessage, viewController: self)
   }
   
+  private func handleSearchText(_ text: String) {
+    let searchButtonColor: UIColor = text.isEmpty ? .lightGray : .blue
+    UIView.animate(withDuration: 0.5) {
+      self.searchButton.backgroundColor = searchButtonColor
+    }
+  }
+  
   private func setUpRx() {
     self.viewModel.isSuccess
       .asObservable()
@@ -98,10 +106,18 @@ class SearchVC: UIViewController {
       .bind { errorMessage in
         self.handleErrorMessage(errorMessage)
       }.disposed(by: self.viewModel.disposeBag)
+    
+    self.searchBarTextField
+      .rx
+      .text
+      .orEmpty
+      .bind { (text) in
+        self.handleSearchText(text)
+      }.disposed(by: self.viewModel.disposeBag)
   }
   
   private func search() {
-    guard let movieTitle = searchBarTextField.text else {
+    guard let movieTitle = searchBarTextField.text, !movieTitle.isEmpty else {
       return
     }
     
